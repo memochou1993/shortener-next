@@ -20,6 +20,10 @@ class Storage {
     await this.collection.doc(key).set(value);
   }
 
+  async getItem(key) {
+    return (await this.collection.doc(key).get()).data();
+  }
+
   async fetchItems() {
     const items = {};
     const snapshot = await this.collection.get();
