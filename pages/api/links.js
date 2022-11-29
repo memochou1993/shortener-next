@@ -18,5 +18,5 @@ export default async function handler(req, res) {
     link,
   };
   storage.setItem(key, value);
-  res.status(200).json(value);
+  res.status(201).json(value);
 }
